@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+#principal {
+    text-align: center;
+}
+
+input {
+    padding-left: 20px;
+    padding-right: 300px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-color: rgba(200, 190, 190, 0.52);
+    border-radius: 10px;
+}
+
+#entrar {
+    margin-top: 25px;
+    padding: 15px 80px;
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Bebas Neue';
+    font-weight: 100;
+    box-shadow: 1px 1px 4px 0px;
+}
+
+#textocima {
+    margin-right: 456px;
+    margin-bottom: 5px;
+    color: rgba(44, 44, 44, 0.692);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#textobaixo {
+    margin-right: 448px;
+    margin-bottom: 5px;
+    color: rgba(44, 44, 44, 0.692);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    margin-top: 0px;
+    width: 300px;
+    height: 300px;
+}
+
+#sia {
+    text-align: center;
+    margin-top: 250px;
+}
+
+body {
+    background-image: linear-gradient(to right, #526ae6 68%, #ffffff 32%);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+#corpo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 600px;
+    padding-right: 50px;
+    margin-bottom: 110px;
+}
+
+@media (max-width: 900px) {
+    #corpo {
+        width: 450px;
+        padding-right: 30px;
+    }
+
+    input {
+        padding-right: 150px;
+    }
+
+    #textocima, #textobaixo {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    #corpo {
+        width: 200px;
+        padding-right: 15px;
+    }
+
+    input {
+        padding-right: 40px;
+        width: auto;
+    }
+
+    #entrar {
+        padding: 12px 50px;
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+#carro2 {
+    display: block;
+    margin: 0 auto;
+}
+#alugar{
+    text-align: left;
+    left: 20px;
+    top: 20px;
+}

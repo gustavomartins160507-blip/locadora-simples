@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locadora - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="src/favicon-car.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="corpo">
+        <div id="principal">
+            <img src="src/Logo minimalista DEV CARROS (1).png" alt="logodecarro">
+            <section>
+                <p id="textocima">email</p>
+                <input type="text" name="matricula" id="matricula" placeholder="📧 digite seu email">
+                <p id="textobaixo">senha</p>
+                <input type="password" name="senha" id="senha" placeholder="🔒 digite sua senha"><br>
+                <input type="button" value="Entrar" id="entrar" onclick="verificar()">
+            </section>
+        </div>
+    </div>
+    <script>
+        function verificar(){
+            var pergunta1 = document.getElementById('matricula')
+            var pergunta2 = document.getElementById('senha')
+
+            if (pergunta1.value.trim() === '') {
+                alert('Campo de email inválido')
+                pergunta1.innerHTML=''
+                return false
+            } 
+            else if (pergunta2.value.trim() === '') {
+                alert('Insira sua senha')
+                pergunta2.innerHTML=''
+                return false
+            }
+            window.location.href = "pagina2.html"
+            return true
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
