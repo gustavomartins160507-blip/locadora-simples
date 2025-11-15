@@ -30,3 +30,20 @@ function prev() {
 btnnext.addEventListener('click', next);
 btnprev.addEventListener('click', prev);
 mostrar();
+function verificar2(){
+    var pergunta1 = document.getElementById('matricula')
+    var pergunta2 = document.getElementById('senha')
+
+    if (pergunta1.value.trim() === '') {
+        alert('Campo de email inválido')
+        pergunta1.innerHTML=''
+        return false
+    } 
+    else if (pergunta2.value.trim() === '') {
+        alert('Insira sua senha')
+        pergunta2.innerHTML=''
+        return false
+    }
+    window.location.href = "pagina2.html"
+    return true
+}

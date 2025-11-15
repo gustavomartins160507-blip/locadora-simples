@@ -11,6 +11,8 @@
   const tbody=document.querySelectorAll('tbody')
   const clientenovo=document.getElementById('clientenovo')
   const botaoaba=document.getElementById('botaoaba')
+  const btnsenha=document.getElementById('btn-senha')
+  const senhapass=document.getElementById('senha')
   document.querySelectorAll("[data-bs-toggle='popover']").forEach(btn => {
     new bootstrap.Popover(btn);
     });
@@ -66,3 +68,56 @@ document.addEventListener('click',e =>{
     bootstrap.Popover.getInstance(e.target.closest("[data-bs-toggle='popover']")).hide()
   }
 })
+function verificar2(){
+  var pergunta1 = document.getElementById('matricula')
+  var pergunta2 = document.getElementById('senha')
+  if (pergunta1.value.trim() === '') {
+      alert('Campo de email inválido')
+      pergunta1.innerHTML=''
+      return false
+  } 
+  else if(pergunta1.value.indexOf("@gmail.com") === -1){
+  window.alert('campo email inválido (insira "@gmail.com")')
+  return false
+  }
+  else if (pergunta2.value.trim() === '') {
+      alert('Insira sua senha')
+      pergunta2.innerHTML=''
+      return false
+  }
+  else if(!validar_senha(pergunta2)){
+    return false
+  }
+  window.location.href = "pagina2.html"
+  return true
+}
+function validar_senha(pergunta2){
+  const senha=pergunta2.value
+  if (senha.length < 8){
+    window.alert('A senha precisa conter pelomenos 8 caracteres...')
+    return false
+  }
+  if (!/[A-Z]/.test(senha)){
+    window.alert('A senha deve conter pelomenos uma letra maiúscula...')
+    return false
+  }
+  if(!/[a-z]/.test(senha)){
+    window.alert('A senha deve conter pelomenos uma minúscula...')
+    return false
+  }
+  if(!/[!@#$%¨&*<>;:.|?"'°^{}]/.test(senha)){
+    window.alert('A senha deve conter pelomenos um caracter especial... ex: !@#$%¨&*<>;:.|?"')
+    return false
+  }
+  return true
+}
+function mostrar_senha(){
+  if(senhapass.type === 'password'){
+    senhapass.setAttribute('type','text')
+    btnsenha.classList.replace('bi-eye','bi-eye-slash')
+  }
+  else{
+    senhapass.setAttribute('type','password')
+    btnsenha.classList.replace('bi-eye-slash','bi-eye')
+  }
+}
